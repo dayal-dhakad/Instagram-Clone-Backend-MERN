@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  gender: {
+    type: String,
+  },
+
   password: {
     type: String,
     required: true,
@@ -28,10 +32,12 @@ const userSchema = new mongoose.Schema({
   profileImg: {
     type: String,
   },
-  posts: [{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:"posts"
-  }],
+  posts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "posts",
+    },
+  ],
   followers: {
     type: Number,
   },

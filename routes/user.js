@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
+
+//api route
+
+
 const { login, signUp } = require("../controllers/Auth");
 const { home } = require("../controllers/home");
 const {
@@ -52,5 +56,7 @@ router.get("/admin", auth, isAdmin, (req, res) => {
     message: "Welcome to the protected routes for Admin",
   });
 });
+
+
 
 module.exports = router;
